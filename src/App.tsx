@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./App.css";
+import TodoInput from "./components/TodoInput";
+import TodoList from "./components/TodoList";
+import { TODO_CONSTANTS } from "./constants/common";
 
 function App() {
   const [list, setList] = useState<string[]>([]);
@@ -23,35 +26,16 @@ function App() {
   return (
     <>
       <div className="todo-container">
-        <h1 className="title">📝 To-Do App</h1>
+        <h1 className="title">{TODO_CONSTANTS.TODO_APP_TITLE}</h1>
 
-        <div className="input-section">
-          <input
-            type="text"
-            value={listItem}
-            placeholder="Enter a new task..."
-            onChange={onItemChange}
-            className="todo-input"
-          />
-          <button onClick={onAddItemClick} className="add-btn">
-            Add
-          </button>
-        </div>
+        <TodoInput
+          listItem={listItem}
+          onItemChange={onItemChange}
+          onAddItemClick={onAddItemClick}
+        />
 
         {list?.length > 0 && (
-          <ul className="todo-list">
-            {list?.map((item, index) => (
-              <li key={index} className="todo-item">
-                <span>{item}</span>
-                <button
-                  onClick={(e) => onItemDelete(index)}
-                  className="delete-btn"
-                >
-                  ✖
-                </button>
-              </li>
-            ))}
-          </ul>
+          <TodoList list={list} onItemDelete={onItemDelete} />
         )}
       </div>
     </>

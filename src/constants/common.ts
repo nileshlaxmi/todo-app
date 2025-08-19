@@ -1,0 +1,23 @@
+export const TODO_CONSTANTS = {
+  MAX_LIST_ITEMS: 100,
+  MIN_ITEM_LENGTH: 1,
+  MAX_ITEM_LENGTH: 50,
+  EMPTY_ITEM_ERROR: "Item cannot be empty",
+  ITEM_TOO_LONG_ERROR: "Item exceeds maximum length",
+  ITEM_ADDED_SUCCESS: "Item added successfully",
+  ITEM_DELETED_SUCCESS: "Item deleted successfully",
+  ADD: "Add",
+  DELETE: "Delete",
+  TODO_APP_TITLE: "📝 To-Do App",
+  ENTER_TASK_PLACEHOLDER: "Enter a new task...",
+  DELETE_BUTTON_LABEL: "✖",
+  ADD_BUTTON_LABEL: "Add",
+  TODO_LIST_CLASS: "todo-list",
+  TODO_ITEM_CLASS: "todo-item",
+  INPUT_SECTION_CLASS: "input-section",
+  TODO_INPUT_CLASS: "todo-input",
+  ADD_BTN_CLASS: "add-btn",
+  DELETE_BTN_CLASS: "delete-btn",
+  TITLE_CLASS: "title",
+  TODO_CONTAINER_CLASS: "todo-container"
+};
